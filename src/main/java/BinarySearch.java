@@ -1,6 +1,10 @@
 public class BinarySearch {
 
-    public int search(int array[], int first, int last, int value) {
+    public int searchArray(int[] array, int value) {
+        return search(array, 0, array.length - 1, value);
+    }
+
+    private int search(int array[], int first, int last, int value) {
 
         int mid = (first + last) / 2;
         if (value == array[mid]) {
